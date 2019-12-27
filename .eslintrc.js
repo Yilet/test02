@@ -3,13 +3,13 @@ module.exports = {
   env: {
     node: true
   },
-  'extends': [
-    'plugin:vue/essential',
-    '@vue/standard'
-  ],
+  extends: ['plugin:vue/essential', '@vue/standard'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // data() 括号前面必须要有空格的校验 去掉
+    'space-before-function-paren': 0,
+    'spaced-comment': 0
   },
   parserOptions: {
     parser: 'babel-eslint'
